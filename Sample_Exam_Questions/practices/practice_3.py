@@ -41,9 +41,9 @@ def good_subsequences(word):
     list = []
     word_list = ['']
     if not word:
-        print([word])
+        return [word]
     elif len(word) == 1:
-        print(['',word])
+        return ['',word]
     else:
         list.append(word[0])
         if word[1:]:
@@ -55,8 +55,8 @@ def good_subsequences(word):
         #print(set_list)
         for length in range(1,len(set_list)+1):
             word_list.extend(justify_sequences(list,length))
-
-        print(sorted(word_list))
+            
+        return sorted(word_list)
 
 # Possibly define another functions
 def justify_sequences(l,n):
@@ -72,4 +72,3 @@ def justify_sequences(l,n):
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-
