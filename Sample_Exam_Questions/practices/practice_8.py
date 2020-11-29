@@ -52,9 +52,9 @@ def is_heterosquare(square):
     set_sum = set(sum_list)
 
     if len(sum_list) == len(set_sum):
-        print('True')
+        return True
     else:
-        print('False')
+        return False
 
     # print(sum_list)
     # print(set_sum)
